@@ -2,23 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f6f8;
+        }
+        main {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 420px;
+        }
+        header {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 14px;
+            color: #333;
+        }
+        h2 {
+            margin-top: 0;
+            color: #555;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 12px 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: #0d6efd;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0b5ed7;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Register NRIIT Learning Management</h1>
-        <p>Learn Practice Get Placed</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="course.html">Course</a>
-            <a href="register.html">Register</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login</a>
-            <a href="trainer.html">Trainer</a>
-            
-        </nav>
-    </header>
+    <main>
+        <header>Register</header>
+        <h2>Student Registration</h2>
+        <form action="/register" method="post">
+            <label for="fullname">Full Name</label>
+            <input id="fullname" name="fullname" type="text" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+            <label for="dob">Date of Birth</label>
+            <input id="dob" name="dob" type="date" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+                <option value="prefer_not_to_say">Prefer not to say</option>
+            </select>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter your password" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
 </body>
 </html>

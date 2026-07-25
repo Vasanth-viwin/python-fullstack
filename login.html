@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
 </head>
 <body>
-    <header>
-        <h1>Login NRIIT Learning Management</h1>
-        <p>Learn Practice Get Placed</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="course.html">Course</a>
-            <a href="register.html">Register</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login</a>
-            <a href="trainer.html">Trainer</a>
-            
-        </nav>
-    </header>
+    <main>
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            <div>
+                <label for="email">Email</label><br>
+                <input id="email" name="email" type="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label for="password">Password</label><br>
+                <input id="password" name="password" type="password" placeholder="Enter your password" required>
+            </div>
+            <div>
+                <button type="submit">Log In</button>
+            </div>
+        </form>
+        <p><a href="register.html">Create an account</a></p>
+        <p><a href="#">Forgot password?</a></p>
+    </main>
 </body>
 </html>
